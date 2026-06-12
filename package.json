@@ -1,0 +1,28 @@
+{
+  "name": "learningplaywright",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "fsevents": "^2.3.2",
+    "playwright-core": "^1.58.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2",
+    "playwright": "^1.60.0"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelAregbe/LearningPlaywright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelAregbe/LearningPlaywright/issues"
+  },
+  "homepage": "https://github.com/MichaelAregbe/LearningPlaywright#readme"
+}
