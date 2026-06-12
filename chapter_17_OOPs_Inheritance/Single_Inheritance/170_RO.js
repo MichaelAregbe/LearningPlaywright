@@ -1,0 +1,56 @@
+class Report {
+    generate(data) {
+        console.log("Raw data: " + data);
+    }
+}
+
+class HTMLReport extends Report {
+    generate(data) {
+        console.log("<html><body>" + data + "</body></html>");
+    }
+}
+
+class JSONReport extends Report {
+    generate(data) {
+        console.log('{"report": "' + data + '"}');
+    }
+}
+
+class TextReport extends Report {
+    generate(data) {
+        console.log("=== REPORT ===\n" + data + "\n==============");
+    }
+}
+
+let reports = [new HTMLReport(), new JSONReport(), new TextReport()];
+for (let r of reports) {
+    r.generate("5 tests passed, 1 failed");
+    console.log("---");
+    // --------------------Output------------------------
+    // <html><body>5 tests passed, 1 failed</body></html>
+    // ---
+    // {"report": "5 tests passed, 1 failed"}
+    // ---
+    // === REPORT ===
+    // 5 tests passed, 1 failed
+    // ============== 
+    // --------------------Output------------------------
+}
+// OR
+// reports.forEach(function (r) {
+//     r.generate("5 tests passed, 1 failed");
+//     console.log("---");
+//     // --------------------Output------------------------
+//     // <html><body>5 tests passed, 1 failed</body></html>
+//     // ---
+//     // {"report": "5 tests passed, 1 failed"}
+//     // ---
+//     // === REPORT ===
+//     // 5 tests passed, 1 failed
+//     // ============== 
+//     // --------------------Output------------------------
+// });
+
+
+
+
